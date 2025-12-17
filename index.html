@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saku Sampah - Ubah Sampah Jadi Cuan</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold text-success" href="#" onclick="showPage('home')">
+                <i class="bi bi-recycle fs-3 me-2"></i> Saku Sampah
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="nav-home" href="#" onclick="showPage('home')">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-prices" href="#" onclick="showPage('prices')">Daftar Harga</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-dashboard" href="#" onclick="showPage('dashboard')">Akun Saya</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-custom-green px-4 rounded-pill shadow-sm" href="#" onclick="showPage('order')">Jemput Sampah</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="content-wrapper">
+        
+        <!-- HALAMAN: BERANDA (HOME) -->
+        <section id="home-page" class="page-section">
+            <!-- Hero Section -->
+            <div class="hero-section d-flex align-items-center">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 mb-5 mb-lg-0">
+                            <h1 class="display-4 fw-bold text-dark mb-3 lh-base">
+                                Ubah Sampah Jadi <span class="text-success">Cuan</span> & Kebaikan.
+                            </h1>
+                            <p class="lead text-secondary mb-4">
+                                Jasa antar jemput sampah terpilah pertama di kota Anda. Kami jemput ke rumah, kami timbang, dan Anda langsung dapat poin!
+                            </p>
+                            <div class="d-flex gap-3 flex-column flex-sm-row">
+                                <button class="btn btn-custom-green btn-lg rounded-pill px-5" onclick="showPage('order')">
+                                    Pesan Penjemputan <i class="bi bi-arrow-right ms-2"></i>
+                                </button>
+                                <button class="btn btn-outline-success btn-lg rounded-pill px-5" onclick="showPage('prices')">
+                                    Cek Harga
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <div class="card border-0 shadow-lg p-4 position-relative mx-auto status-card">
+                                <div class="coin-badge position-absolute top-0 start-0 translate-middle rounded-circle bg-warning p-3 shadow">
+                                    <i class="bi bi-coin text-white fs-4"></i>
+                                </div>
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="icon-circle bg-success-subtle text-success me-3">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                    </div>
+                                    <div class="text-start">
+                                        <small class="text-muted">Lokasi Penjemputan</small>
+                                        <h6 class="mb-0 fw-bold">Rumah Mbak Rina, Blok A3</h6>
+                                    </div>
+                                </div>
+                                <div class="status-line ms-4 mb-4 border-start border-success border-2 ps-4 py-2"></div>
+                                <div class="d-flex align-items-center">
+                                    <div class="icon-circle bg-success text-white me-3">
+                                        <i class="bi bi-truck"></i>
+                                    </div>
+                                    <div class="text-start">
+                                        <small class="text-muted">Status</small>
+                                        <h6 class="mb-0 fw-bold text-success">Sedang Menuju Lokasi</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="container py-5 my-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Kenapa Pilih Saku Sampah?</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-card p-4 text-center">
+                            <div class="icon-circle-lg bg-success-subtle text-success mx-auto mb-3">
+                                <i class="bi bi-truck"></i>
+                            </div>
+                            <h4 class="fw-bold h5">Jemput Bola</h4>
+                            <p class="text-muted">Anda duduk manis di rumah, mitra kami yang akan datang mengambil sampah anorganik Anda.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-card p-4 text-center">
+                            <div class="icon-circle-lg bg-warning-subtle text-warning mx-auto mb-3">
+                                <i class="bi bi-currency-dollar"></i>
+                            </div>
+                            <h4 class="fw-bold h5">Dapat Poin/Uang</h4>
+                            <p class="text-muted">Setiap kilogram sampah ditukar dengan poin yang bisa dicairkan ke E-Wallet atau Pulsa.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-card p-4 text-center">
+                            <div class="icon-circle-lg bg-primary-subtle text-primary mx-auto mb-3">
+                                <i class="bi bi-globe-americas"></i>
+                            </div>
+                            <h4 class="fw-bold h5">Dampak Nyata</h4>
+                            <p class="text-muted">Lacak berapa banyak jejak karbon yang Anda kurangi lewat dashboard pribadi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HALAMAN: ORDER (PEMESANAN) -->
+        <section id="order-page" class="page-section d-none">
+            <div class="container py-5 mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center mb-5">
+                            <h2 class="fw-bold">Formulir Penjemputan</h2>
+                            <p class="text-muted">Isi data di bawah ini agar kami bisa menjemput sampah Anda.</p>
+                        </div>
+
+                        <!-- Success Message Area -->
+                        <div id="order-success-msg" class="card border-success border-2 bg-success-subtle text-center p-5 d-none mb-4">
+                            <div class="mb-3">
+                                <i class="bi bi-check-circle-fill text-success display-1"></i>
+                            </div>
+                            <h3 class="fw-bold text-success mb-2">Pesanan Berhasil!</h3>
+                            <p class="text-dark mb-4">Mitra kolektor kami akan segera menghubungi Anda via WhatsApp.</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <button class="btn btn-outline-success fw-bold" onclick="showPage('dashboard')">Lihat Status</button>
+                                <button class="btn btn-success fw-bold" onclick="resetOrderForm()">Pesan Lagi</button>
+                            </div>
+                        </div>
+
+                        <!-- Form Area -->
+                        <div id="order-form-container" class="card shadow border-0 overflow-hidden">
+                            <div class="card-header bg-success text-white py-3 px-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="small fw-light">Langkah 1 dari 1</span>
+                                    <span class="fw-bold">Detail Penjemputan</span>
+                                </div>
+                            </div>
+                            <div class="card-body p-4 p-md-5">
+                                <form id="bookingForm" onsubmit="submitOrder(event)">
+                                    <div class="mb-4">
+                                        <label for="address" class="form-label fw-bold small text-muted text-uppercase">Alamat Penjemputan</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-white border-end-0"><i class="bi bi-geo-alt text-muted"></i></span>
+                                            <input type="text" class="form-control border-start-0 ps-0" id="address" placeholder="Masukkan alamat lengkap..." required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-4">
+                                        <div class="col-md-6 mb-3 mb-md-0">
+                                            <label for="weight" class="form-label fw-bold small text-muted text-uppercase">Perkiraan Berat (Kg)</label>
+                                            <input type="number" class="form-control" id="weight" placeholder="Contoh: 5" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="type" class="form-label fw-bold small text-muted text-uppercase">Jenis Utama</label>
+                                            <select class="form-select" id="type">
+                                                <option>Campuran</option>
+                                                <option>Plastik (Botol/Gelas)</option>
+                                                <option>Kertas/Kardus</option>
+                                                <option>Logam/Kaleng</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label fw-bold small text-muted text-uppercase">Jadwal Penjemputan</label>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <span class="input-group-text bg-white border-end-0"><i class="bi bi-calendar text-muted"></i></span>
+                                                    <input type="date" class="form-control border-start-0 ps-0" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <select class="form-select">
+                                                    <option>Pagi (08:00 - 11:00)</option>
+                                                    <option>Siang (13:00 - 15:00)</option>
+                                                    <option>Sore (15:00 - 17:00)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="notes" class="form-label fw-bold small text-muted text-uppercase">Catatan Tambahan (Opsional)</label>
+                                        <textarea class="form-control" id="notes" rows="3" placeholder="Contoh: Pagar hitam, tolong ketuk pintu..."></textarea>
+                                    </div>
+
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-custom-green py-3 fw-bold shadow-sm">Konfirmasi Penjemputan</button>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <small class="text-muted">Biaya layanan Rp 5.000 akan dipotong dari saldo.</small>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HALAMAN: DASHBOARD (AKUN) -->
+        <section id="dashboard-page" class="page-section d-none">
+            <div class="container py-5 mt-4">
+                <!-- User Profile Header -->
+                <div class="d-flex align-items-center mb-5">
+                    <div class="bg-secondary bg-opacity-10 p-3 rounded-circle me-3">
+                        <i class="bi bi-person-fill fs-1 text-secondary"></i>
+                    </div>
+                    <div>
+                        <h2 class="fw-bold mb-0">Halo, Rina!</h2>
+                        <span class="text-success fw-medium">Member Sejak Nov 2025</span>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="row g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="card bg-warning text-white border-0 shadow h-100 overflow-hidden position-relative">
+                            <div class="card-body p-4 position-relative z-1">
+                                <p class="mb-1 text-white-50 fw-medium">Total Poin Saku</p>
+                                <h2 class="display-5 fw-bold mb-3">24.500</h2>
+                                <button class="btn btn-light text-warning fw-bold btn-sm">Tukar Poin</button>
+                            </div>
+                            <i class="bi bi-coin position-absolute top-0 end-0 opacity-25" style="font-size: 5rem; margin-right: -10px; margin-top: -10px;"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="icon-sm bg-primary-subtle text-primary rounded p-2">
+                                        <i class="bi bi-truck"></i>
+                                    </div>
+                                    <small class="text-muted fw-bold text-uppercase">Total Berat</small>
+                                </div>
+                                <h2 class="fw-bold text-dark">18.5 <span class="fs-5 text-muted fw-normal">kg</span></h2>
+                                <p class="small text-muted mb-0">Sampah berhasil didaur ulang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="icon-sm bg-success-subtle text-success rounded p-2">
+                                        <i class="bi bi-tree"></i>
+                                    </div>
+                                    <small class="text-muted fw-bold text-uppercase">Dampak</small>
+                                </div>
+                                <h2 class="fw-bold text-dark">3.2 <span class="fs-5 text-muted fw-normal">kg</span></h2>
+                                <p class="small text-muted mb-0">Emisi CO2 yang dicegah</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- History Table -->
+                <h4 class="fw-bold mb-3">Riwayat Penjemputan</h4>
+                <div class="card border-0 shadow-sm overflow-hidden">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="py-3 ps-4">Tanggal</th>
+                                    <th class="py-3">Jenis</th>
+                                    <th class="py-3">Berat</th>
+                                    <th class="py-3">Status</th>
+                                    <th class="py-3 pe-4 text-end">Poin</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ps-4">10 Des 2025</td>
+                                    <td>Plastik & Kardus</td>
+                                    <td>4.5 Kg</td>
+                                    <td><span class="badge bg-success-subtle text-success rounded-pill">Selesai</span></td>
+                                    <td class="pe-4 text-end fw-bold text-success">+9.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="ps-4">02 Des 2025</td>
+                                    <td>Kertas HVS</td>
+                                    <td>2.0 Kg</td>
+                                    <td><span class="badge bg-success-subtle text-success rounded-pill">Selesai</span></td>
+                                    <td class="pe-4 text-end fw-bold text-success">+4.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="ps-4">28 Nov 2025</td>
+                                    <td>Botol Kaca</td>
+                                    <td>5.0 Kg</td>
+                                    <td><span class="badge bg-secondary-subtle text-secondary rounded-pill">Dibatalkan</span></td>
+                                    <td class="pe-4 text-end fw-bold text-muted">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HALAMAN: HARGA (PRICES) -->
+        <section id="prices-page" class="page-section d-none">
+            <div class="container py-5 mt-4">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Daftar Harga Sampah</h2>
+                    <p class="text-muted">Harga update per 17 Desember 2025. Harga bisa berubah mengikuti pasar.</p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <!-- Kategori Plastik -->
+                    <div class="col-md-6 col-lg-5">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-white border-0 pt-4 px-4 pb-0">
+                                <h4 class="fw-bold text-success d-flex align-items-center">
+                                    <i class="bi bi-recycle me-2"></i> Plastik
+                                </h4>
+                            </div>
+                            <div class="card-body p-4">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center py-3 border-bottom-0 border-top-0 border-light-subtle">
+                                        <span>Botol Plastik Bersih (PET)</span>
+                                        <span class="fw-bold text-dark">Rp 2.500 /kg</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center py-3 bg-light rounded">
+                                        <span>Gelas Plastik (Air Mineral)</span>
+                                        <span class="fw-bold text-dark">Rp 3.500 /kg</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center py-3 border-bottom-0">
+                                        <span>Tutup Botol</span>
+                                        <span class="fw-bold text-dark">Rp 2.000 /kg</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kategori Kertas -->
+                    <div class="col-md-6 col-lg-5">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-white border-0 pt-4 px-4 pb-0">
+                                <h4 class="fw-bold text-warning d-flex align-items-center">
+                                    <i class="bi bi-journal-text me-2"></i> Kertas & Kardus
+                                </h4>
+                            </div>
+                            <div class="card-body p-4">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center py-3 border-bottom-0 border-top-0 border-light-subtle">
+                                        <span>Kardus Bekas</span>
+                                        <span class="fw-bold text-dark">Rp 1.500 /kg</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center py-3 bg-light rounded">
+                                        <span>Kertas HVS/Buku</span>
+                                        <span class="fw-bold text-dark">Rp 2.000 /kg</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center py-3 border-bottom-0">
+                                        <span>Koran</span>
+                                        <span class="fw-bold text-dark">Rp 1.200 /kg</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-recycle fs-4 text-success me-2"></i>
+                        <span class="fw-bold fs-5">Saku Sampah</span>
+                    </div>
+                    <p class="text-secondary small">Platform digital penghubung rumah tangga dan industri daur ulang untuk Indonesia yang lebih bersih.</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold text-white mb-3">Layanan</h6>
+                    <ul class="list-unstyled text-secondary small">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary hover-white">Antar Jemput</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary hover-white">Jual Beli Sampah</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary hover-white">Edukasi Lingkungan</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold text-white mb-3">Kontak</h6>
+                    <ul class="list-unstyled text-secondary small">
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> support@sakusampah.id</li>
+                        <li class="mb-2"><i class="bi bi-whatsapp me-2"></i> +62 812 3456 7890</li>
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Jl. Teknologi No. 10, Jakarta</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-4 pt-3 text-center">
+                <small class="text-secondary">&copy; 2025 Saku Sampah. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

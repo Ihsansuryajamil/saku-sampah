@@ -1,0 +1,123 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 60px; /* Space for fixed navbar */
+}
+
+/* --- Color Palette Overrides --- */
+:root {
+    --bs-success: #10b981; /* Emerald 500 */
+    --bs-success-rgb: 16, 185, 129;
+    --bs-warning: #f59e0b; /* Amber 500 */
+}
+
+.text-success { color: #10b981 !important; }
+.bg-success { background-color: #10b981 !important; }
+
+/* --- Navbar --- */
+.navbar {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.nav-link {
+    font-weight: 500;
+    color: #4b5563;
+}
+.nav-link:hover, .nav-link.active {
+    color: #10b981 !important;
+}
+
+/* --- Buttons --- */
+.btn-custom-green {
+    background-color: #10b981;
+    color: white;
+    border: 1px solid #10b981;
+    transition: all 0.3s ease;
+}
+.btn-custom-green:hover {
+    background-color: #059669; /* Emerald 600 */
+    border-color: #059669;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.4);
+}
+.btn-outline-success {
+    border-color: #10b981;
+    color: #10b981;
+}
+.btn-outline-success:hover {
+    background-color: #10b981;
+    color: white;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    min-height: 80vh;
+    background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%);
+}
+
+/* --- Status Card Animation --- */
+.status-card {
+    border-radius: 1.5rem;
+    max-width: 400px;
+    background: white;
+}
+.coin-badge {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -10px;
+    left: -10px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-circle-lg {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+}
+
+/* --- Feature Cards --- */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem;
+}
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* --- Form --- */
+.form-control:focus, .form-select:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25);
+}
+
+/* --- Footer --- */
+.hover-white:hover {
+    color: white !important;
+}
+
+/* --- Utilities --- */
+.cursor-pointer {
+    cursor: pointer;
+}
